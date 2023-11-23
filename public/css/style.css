@@ -437,7 +437,18 @@ body {
 
 }
 @media (max-width: 767px) {
+    .img-fluid{
+        display: none;
 
+    }
+
+
+    .header {
+        flex-direction: column;
+        margin-left: -60px;
+
+
+    }
 }
 
 

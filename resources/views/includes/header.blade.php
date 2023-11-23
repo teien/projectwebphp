@@ -18,13 +18,13 @@
             <li class="nav-item d-none d-sm-block">
                 <a class="nav-link" href="#">Blog</a>
             </li>
-            <li class="nav-item d-none d-sm-block ">
+            <li class="nav-item  ">
                 <a class="nav-link" href="#">Liên hệ</a>
             </li>
         </ul>
 
         <div class="logo col-4 d-flex justify-content-center align-items-center">
-            <img width="100px" src="https://xxivstore.com/wp-content/uploads/2023/10/XXIV-Logo-2.svg" alt="" />
+            <img width="100px" class="img-fluid" src="https://xxivstore.com/wp-content/uploads/2023/10/XXIV-Logo-2.svg" alt="" />
         </div>
 
         <!-- Right Side Of Navbar -->
