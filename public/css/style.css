@@ -122,8 +122,8 @@ body {
   #products1 .pro-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 36px;
-    justify-content: flex-start;
+    gap: 30px;
+    justify-content: space-between;
     align-content: start;
   }
   #products1 {
