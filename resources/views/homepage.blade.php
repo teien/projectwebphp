@@ -107,14 +107,17 @@
                 </div>
 
             </div>
+
+
             <div id="products1" class="product">
                 <a>SẢN PHẨM NỔI BẬT</a>
                 <div class="pro-container">
-                    <div class="pro">
-                        <img src="https://xxivstore.com/wp-content/uploads/2022/09/Marie-Jeanne-Vetiver-Santal-300x300.png" alt="" />
+                @foreach($products as $row)
+                    <div class="pro ">
+                        <img src="{{$row->img_link}}" alt="" />
                         <div class="des">
                             <span>HOT</span>
-                            <h5>Vetiver Santal</h5>
+                            <h5>{{$row->name}}</h5>
                             <div class="rating">
                                 <input type="radio" id="star5" name="rating" value="5" />
                                 <label for="star5"></label>
@@ -127,11 +130,13 @@
                                 <input type="radio" id="star1" name="rating" value="1" />
                                 <label for="star1"></label>
                             </div>
-                            <h4>5.100.000 ₫</h4>
+                            <h4>Price :{{$row->price}}đ</h4>
                             <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
                         </div>
                     </div>
+                    @endforeach
                 </div>
+                
 
                 <div id="Letter" class="Letter text-center">
                     <h1>Đăng ký thành viên để nhận khuyến mại</h1>

@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse header justify-content-between flex-row" id="navbarNav">
             <ul class="navbar-nav text-center d-flex gap-3 flex-row" id="navbarmenu">
                 <li class="nav-item active ">
-                    <a class="nav-link" href="#">Trang chủ</a>
+                    <a class="nav-link" href="/">Trang chủ</a>
                 </li>
                 <li class="nav-item d-none d-sm-block">
                     <a class="nav-link" href="#">Giới thiệu</a>
@@ -15,7 +15,7 @@
                     <a class="nav-link" href="#">Thương Hiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sản phẩm</a>
+                    <a class="nav-link" href="/product">Sản phẩm</a>
                 </li>
                 <li class="nav-item d-none d-sm-block">
                     <a class="nav-link" href="#">Blog</a>

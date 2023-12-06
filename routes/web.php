@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProductHomepage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +14,18 @@ use Illuminate\Support\Facades\Auth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('homepage');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
+Route::get('/', [App\Http\Controllers\ProductHomepage::class, 'product']);
+
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);//view dtb ra trang product
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'product']);
+
 
  
