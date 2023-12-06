@@ -309,6 +309,7 @@
 
 
                             </div>
+                            <div class="d-flex flex-wrap col-10">
                                 @foreach($products as $row)
                                 <div class="product">
                                     <img src="{{$row->img_link}}" alt="" />
@@ -332,6 +333,8 @@
                                     </div>
                                 </div>
                                 @endforeach
+                            </div>
+
                         </div>
                     </div>
                 </div>
