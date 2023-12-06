@@ -99,10 +99,6 @@
         }
 
 
-        div {
-            display: block;
-        }
-
         .uk-grid {
             display: flex;
             flex-wrap: wrap;
@@ -160,195 +156,186 @@
                 </div>
 
                 <div class="product-cat-wrap d-flex row">
-                    <div class="uk-container flex">
-                        <div class="uk-child-width-1-2 uk-grid-match uk-grid-column-small uk-grid" uk-grid="">
-                            <div class="">
-                                <div class="uk-width-2-5@s uk-width-1-5@m uk-first-column">
+                    <div class="uk-child-width-1-2 uk-grid-match uk-grid-column-small uk-grid" uk-grid="">
+                        <div class="">
+                            <div class="nav-bar">
 
 
-                                    <div class="sidebar-product uk-visible@s">
-                                        <div class="uk-panel widget widget_text" id="text-2">
-                                            <h3>
+                                <div class="sidebar-product uk-visible@s">
+                                    <div class="uk-panel widget widget_text" id="text-2">
+                                        <h3>
 
-                                                Thương hiệu
-                                            </h3>
+                                            Thương hiệu
+                                        </h3>
 
-                                            <div class="uk-panel textwidget">
-                                                <p>
-                                                </p>
-                                                <div class="filter-by-brand">
-                                                    <input type="text" class="uk-input" id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm nhanh" title="Type in a name">
-                                                    <div class="list-cat">
-                                                        <table id="myTable">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Creed</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Tom Ford</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Dior</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">By Kilian</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Hermès</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Art de Parfum</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Astrophil Stella</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Attar Collection</a> </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="" class="">Azzaro</a> </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                        <div class="uk-panel textwidget">
+                                            <p>
+                                            </p>
+                                            <div class="filter-by-brand">
+                                                <input type="text" class="uk-input" id="myInput" onkeyup="myFunction()" placeholder="Tìm kiếm nhanh" title="Type in a name">
+                                                <div class="list-cat">
+                                                    <table id="myTable">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td> <a href="" class="">Creed</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Tom Ford</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Dior</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">By Kilian</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Hermès</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Art de Parfum</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Astrophil Stella</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Attar Collection</a> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> <a href="" class="">Azzaro</a> </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
-
-
-
-                                        <div class="uk-panel widget widget_custom_html" id="custom_html-2">
-                                            <div class="widget_text item-filter">
-                                                <div class="widget_text sidebar-box">
-                                                    <div class="textwidget custom-html-widget">
-                                                        <form class="form-filter-price" action="/shop/" method="GET">
-
-                                                            <div class="filter-sidebar gender-filter">
-                                                                <h3>GIỚI TÍNH</h3>
-                                                                <div class="item-child">
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nam">Nam</label>
-                                                                    </p>
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nu">Nữ</label>
-                                                                    </p>
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="unisex">Unisex</label>
-                                                                    </p>
-
-                                                                </div>
-
-                                                            </div>
-
-
-                                                            <div class="filter-sidebar season-filter">
-                                                                <h3>MÙA</h3>
-                                                                <div class="item-child">
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="dong">Đông</label>
-                                                                    </p>
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="ha">Hạ</label>
-                                                                    </p>
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="thu">Thu</label>
-                                                                    </p>
-
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="xuan">Xuân</label>
-                                                                    </p>
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="filter-sidebar">
-                                                                <h3>THEO GIÁ</h3>
-                                                                <div class="item-child">
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="1500000-3000000">1.500.000 - 3.000.000</label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="3000000-5000000">3.000.000 - 5.000.000</label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000</label>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
 
 
 
-                                </div>
-                                <div class="uk-width-5-5@s uk-width-4-5@m ">
-                                    <div class="content-product-cat">
-                                        <form class="woocommerce-ordering" method="get">
-                                            <select name="orderby" class="orderby  uk-select" aria-label="Đơn hàng của cửa hàng">
-                                                <option value="popularity">Thứ tự theo mức độ phổ biến</option>
-                                                <option value="rating">Thứ tự theo điểm đánh giá</option>
-                                                <option value="date" selected="selected">Mới nhất</option>
-                                                <option value="price">Thứ tự theo giá: thấp đến cao</option>
-                                                <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
-                                            </select>
-                                            <input type="hidden" name="paged" value="1">
-                                        </form>
+                                    <div class="uk-panel widget widget_custom_html" id="custom_html-2">
+                                        <div class="widget_text item-filter">
+                                            <div class="widget_text sidebar-box">
+                                                <div class="textwidget custom-html-widget">
+                                                    <form class="form-filter-price" action="/shop/" method="GET">
 
+                                                        <div class="filter-sidebar gender-filter">
+                                                            <h3>GIỚI TÍNH</h3>
+                                                            <div class="item-child">
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nam">Nam</label>
+                                                                </p>
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nu">Nữ</label>
+                                                                </p>
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="unisex">Unisex</label>
+                                                                </p>
+
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <div class="filter-sidebar season-filter">
+                                                            <h3>MÙA</h3>
+                                                            <div class="item-child">
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="dong">Đông</label>
+                                                                </p>
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="ha">Hạ</label>
+                                                                </p>
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="thu">Thu</label>
+                                                                </p>
+
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar season-checkbox-filter" name="filter_mua" type="checkbox" value="xuan">Xuân</label>
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="filter-sidebar">
+                                                            <h3>THEO GIÁ</h3>
+                                                            <div class="item-child">
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="1500000-3000000">1.500.000 - 3.000.000</label>
+                                                                </p>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="3000000-5000000">3.000.000 - 5.000.000</label>
+                                                                </p>
+                                                                <p>
+                                                                    <label>
+                                                                        <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000</label>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
+                                <div class="content-product-cat">
+                                    <form class="woocommerce-ordering" method="get">
+                                        <select name="orderby" class="orderby  uk-select" aria-label="Đơn hàng của cửa hàng">
+                                            <option value="popularity">Thứ tự theo mức độ phổ biến</option>
+                                            <option value="rating">Thứ tự theo điểm đánh giá</option>
+                                            <option value="date" selected="selected">Mới nhất</option>
+                                            <option value="price">Thứ tự theo giá: thấp đến cao</option>
+                                            <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
+                                        </select>
+                                        <input type="hidden" name="paged" value="1">
+                                    </form>
+
+                                </div>
+
+
                             </div>
+                                @foreach($products as $row)
+                                <div class="product">
+                                    <img src="{{$row->img_link}}" alt="" />
+                                    <div class="des">
+                                        <span>HOT</span>
+                                        <h5>{{$row->name}}</h5>
+                                        <div class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5" />
+                                            <label for="star5"></label>
+                                            <input type="radio" id="star4" name="rating" value="4" />
+                                            <label for="star4"></label>
+                                            <input type="radio" id="star3" name="rating" value="3" />
+                                            <label for="star3"></label>
+                                            <input type="radio" id="star2" name="rating" value="2" />
+                                            <label for="star2"></label>
+                                            <input type="radio" id="star1" name="rating" value="1" />
+                                            <label for="star1"></label>
+                                        </div>
+                                        <h4>Price :{{$row->price}}đ</h4>
+                                        <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                                    </div>
+                                </div>
+                                @endforeach
                         </div>
                     </div>
-                   
-                    
-                        @foreach($products as $row)
-                            <div class="pro ">
-                                <img src="{{$row->img_link}}" alt="" />
-                                <div class="des">
-                                    <span>HOT</span>
-                                    <h5>{{$row->name}}</h5>
-                                    <div class="rating">
-                                        <input type="radio" id="star5" name="rating" value="5" />
-                                        <label for="star5"></label>
-                                        <input type="radio" id="star4" name="rating" value="4" />
-                                        <label for="star4"></label>
-                                        <input type="radio" id="star3" name="rating" value="3" />
-                                        <label for="star3"></label>
-                                        <input type="radio" id="star2" name="rating" value="2" />
-                                        <label for="star2"></label>
-                                        <input type="radio" id="star1" name="rating" value="1" />
-                                        <label for="star1"></label>
-                                    </div>
-                                    <h4>Price :{{$row->price}}đ</h4>
-                                    <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
-                                </div>
-                            </div>
-                    @endforeach
                 </div>
-
             </main>
-
         </div>
     </div>
 </body>
