@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    @yield('content')
+    @yield('content_hot')
 </body>
 </html>

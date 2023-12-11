@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\GgController;
+use App\Http\Controllers\FacebookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +17,21 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('homepage');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });
+Route::get('/auth/google/redirect', [GgController::class, 'index'])->name('login.google');
+Route::get('/auth/google/callback', [GgController::class, 'create'])->name('login_create.google');
+Route::get('/user',[UserController::class,'index']);
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/', [App\Http\Controllers\AddHotProductController::class, 'index']);
-Route::get('/admin/product/{id}', [App\Http\Controllers\AddHotProductController::class,'show']);
+
+

@@ -1,5 +1,5 @@
 <footer>
-    <div class="Footer d-flex flex-row col-12">
+    <div class="Footer d-flex">
         <div class="d-flex flex-column col-4 text-center">
             <h2>xxiv store</h2>
             <a href="">Ưu đãi thành viên</a>
@@ -23,7 +23,4 @@
         </div>
     </div>
 
-
-
 </footer>
-
