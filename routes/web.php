@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductHomepage;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/home',[App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/', [App\Http\Controllers\ProductHomepage::class, 'product']);
+Route::get('/',[App\Http\Controllers\ProductHomepage::class, 'product']);
 
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);//view dtb ra trang product
-Route::get('/product', [App\Http\Controllers\ProductController::class, 'product']);
-
-
- 
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'product'])->name('products.filter');
+Route::get('/search}', [App\Http\Controllers\ProductController::class, 'search'])->name('search');

@@ -8,7 +8,7 @@ class ProductHomepage extends Controller
 {
     public function product()
     {
-        $products = DB::table('product')->select('*');
+        $products = DB::table('products')->select('*');
         $products = $products->get();
         return view('homepage', compact('products'));
     }
