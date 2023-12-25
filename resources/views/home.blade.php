@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -108,11 +112,17 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <div class="distance"></div>
         @include('product.hot_product')
+        <br>
+        <br>
         <div class="distance"></div>
         @include('product.sale_product')
+        <div class="d-flex justify-content-center video">
+            <iframe width="1201" height="676" src="https://www.youtube.com/embed/Ax0jGQTofJg" title="TOP 10 Mùi Hương Kinh Điển Dành Cho Nam Giới | Trò Chuyện Cùng Hoàng XXIV (PHẦN 1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
         <div class="container">
             <h2 class="text-center mt-4 mb-4">Tại sao chọn xxiv store</h2>
             <div class="row">
@@ -138,11 +148,16 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <div class="distance"></div>
+
             <div id="Letter" class="Letter text-center">
                 <h1>Đăng ký thành viên để nhận khuyến mại</h1>
                 <p>Theo dõi chúng tôi để nhận thêm nhiều ưu đãi</p>
                 <div class="d-flex justify-content-center">
-                    <input type="text" placeholder="nhập mail" />
+                    <input type="text" placeholder="Mail của bạn ..." />
                     <a class="mail-btn">Đăng kí</a>
                 </div>
             </div>
@@ -155,7 +170,6 @@
             </div>
         </div>
     </div>
-
     </div>
 
     @include('includes.footer')
