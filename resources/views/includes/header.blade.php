@@ -6,13 +6,13 @@
         <div class="collapse navbar-collapse header justify-content-between flex-row" id="navbarNav">
             <ul class="navbar-nav text-center d-flex gap-3 flex-row" id="navbarmenu">
                 <li class="nav-item active ">
-                    <a class="nav-link" href="#">Trang chủ</a>
+                    <a class="nav-link" href="/">Trang chủ</a>
                 </li>
                 <li class="nav-item d-none d-sm-block">
                     <a class="nav-link" href="#">Giới thiệu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Thương Hiệu</a>
+                    <a class="nav-link" href="/thuong-hieu">Thương Hiệu</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sản phẩm</a>
@@ -21,12 +21,16 @@
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item d-none d-sm-block ">
-                    <a class="nav-link" href="#">Liên hệ</a>
+                    <a class="nav-link" href="/contact">Liên hệ</a>
                 </li>
             </ul>
             <div class="logo d-none d-sm-block ">
-                <img width="80px" src="https://xxivstore.com/wp-content/uploads/2023/10/XXIV-Logo-2.svg" alt="" />
+               <a href="/"> <img width="80px" src="https://xxivstore.com/wp-content/uploads/2023/10/XXIV-Logo-2.svg" alt="" /></a>
             </div>
+          
+
+           
+
             <div class="icon-header d-flex flex-unwrap">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="/login"><i class="fa-regular fa-user"></i></a>

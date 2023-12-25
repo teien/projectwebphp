@@ -137,8 +137,8 @@
                     <h1>Đăng ký thành viên để nhận khuyến mại</h1>
                     <p>Theo dõi chúng tôi để nhận thêm nhiều ưu đãi</p>
                     <div class="d-flex justify-content-center">
-                        <input type="text" placeholder="nhập mail" />
-                        <a class="mail-btn">Đăng kí</a>
+                        <input type="text" placeholder="Nhập Mail" />
+                        <a class="mail-btn">Đăng Ký</a>
                     </div>
                 </div>
 

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ProductDetail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
+
+Route::get('/product/{id}' , [ProductDetail::class, 'show']);
+
+Route::get('/product' , [ProductDetail::class, 'index']);
+
+Route::post('/contact' , [ContactController::class, 'store']);
+
+Route::post('/comments' , [ProductDetail::class, 'store']);
+
+
+
+
+
+
+
+
+
