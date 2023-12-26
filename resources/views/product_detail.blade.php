@@ -77,7 +77,7 @@ input[type=checkbox]{
     display:none;
 }
 input[type=checkbox]:checked ~ label > img {
-    transform: scale(1.5);
+    transform: scale(1.1);
     cursor: zoom-out;
 
 }
@@ -231,15 +231,18 @@ input[type=checkbox]:checked ~ label > img {
 
 
         <div class="container">
-            <h2 class="text-center">San pham lien quan</h2>
+            <h2 class="text-center">Sản phẩm hot nhất</h2>
             <div class="row">
                 <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    
-           </div>
+                    <a href="/product/5">
+
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                
+                            </div>
+                        </a>
 </div>
                 </div>
                 <div class="col-3">

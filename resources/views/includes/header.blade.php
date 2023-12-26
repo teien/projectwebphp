@@ -11,9 +11,7 @@
                 <li class="nav-item d-none d-sm-block">
                     <a class="nav-link" href="#">Giới thiệu</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/thuong-hieu">Thương Hiệu</a>
-                </li>
+               
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sản phẩm</a>
                 </li>
