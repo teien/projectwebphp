@@ -126,8 +126,8 @@
                                                                         <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000
                                                                     </label>
                                                                 </p>
+                                                                <button type="submit">Lọc</button>
                                                             </div>
-                                                            <button type="submit">Lọc</button>
                                                         </div>
 
                                                     </form>
@@ -176,7 +176,7 @@
                                                     <label for="star1"></label>
                                                 </div>
                                                 <h5>Sex: {{$row->sex}}</h5>
-                                                <h4>Price :{{$row->price}}đ</h4>
+                                                <h4 class="mt-2 price">{{ number_format($row->price, 0, ',', '.') }} đ</h4>    
                                                 <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
                                             </div>
                                         </div>
