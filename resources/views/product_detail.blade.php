@@ -248,47 +248,19 @@
         </div>
 
 
-        <div class="container">
-            <h2 class="text-center">San pham lien quan</h2>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-
-                        </div>
-                    </div>
-                </div>
+        @foreach($relatedProducts as $relatedProduct)
+    <div class="col-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ $relatedProduct->name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Danh mục: {{ $relatedProduct->catalog }}</h6>
             </div>
         </div>
+    </div>
+@endforeach
+
+
+
         
         <div id="Letter" class="Letter text-center">
             <h1>Đăng ký thành viên để nhận khuyến mại</h1>

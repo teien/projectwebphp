@@ -29,6 +29,20 @@ class ProductDetail extends Controller
         return redirect()->action([ProductDetail::class,'index'])
     ;
     }
+    public function productDetail($productId)
+{
+    // Lấy thông tin sản phẩm chính
+    $mainProduct = Product::find($productId);
+
+    // Lấy danh sách sản phẩm liên quan (ví dụ lấy 4 sản phẩm)
+    $relatedProducts = Product::where('catalog_id', $mainProduct->catalog_id)
+        ->where('id', '<>', $mainProduct->id)
+        ->take(4)
+        ->get();
+
+    return view('product_detail', compact('mainProduct', 'relatedProducts'));
+}
+
 
    
 }

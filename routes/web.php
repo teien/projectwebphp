@@ -36,6 +36,9 @@ Route::post('/contact' , [ContactController::class, 'store']);
 
 Route::post('/comments' , [ProductDetail::class, 'store']);
 
+// Trong tệp web.php
+Route::get('/product/{id}', [ProductDetail::class, 'productDetail']);
+
 
 
 
