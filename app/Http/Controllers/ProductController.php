@@ -49,4 +49,20 @@ class ProductController extends Controller
         ->get();
         return view('product',compact('products'));
     }
+
+    public function search2(Request $request)
+{
+    $searchTerm = $request->input('search2');
+    $orderBy = $request->input('orderby', 'price');
+    $orderDirection = $orderBy === 'price-desc' ? 'desc' : 'asc';
+
+    $products = Product::where('name', 'like', '%' . $searchTerm . '%')
+        ->orderByPrice($orderDirection)
+        ->get();
+
+    // Trả về view cùng với giá trị tìm kiếm và các giá trị khác
+    return view('product', compact('products', 'searchTerm', 'orderBy'));
+
+
+}
 }

@@ -121,7 +121,7 @@
     height: 100%;
     overflow-y: auto;
     max-height: 192px;
-  
+    
   }
   
   .pic {
@@ -151,7 +151,49 @@
     padding: 10px;
     
   }
-  .col-10 {
-    width: 80%; /* Adjust the width as needed */
-  }
+
+  /* CSS Styling for the list-cat class */
+.list-cat {
+  margin: 20px 0; /* Thêm khoảng cách giữa nội dung và các đường biên */
+}
+
+/* CSS Styling for the table inside list-cat */
+.list-cat table {
+  width: 100%; /* Đặt chiều rộng của bảng là 100% */
+  border-collapse: collapse; /* Gộp việc xổ bảng */
+}
+
+/* CSS Styling for table rows */
+.list-cat tr {
+  border-bottom: 1px solid #ddd; /* Đường biên dưới mỗi dòng */
+  
+}
+
+/* CSS Styling for table data (td) */
+.list-cat td {
+  padding: 10px; /* Thêm độ dày nội dung bên trong ô */
+}
+
+/* CSS Styling for links inside table data */
+.list-cat a {
+  text-decoration: none; /* Loại bỏ gạch chân từ liên kết */
+  color: #333; /* Màu văn bản của liên kết */
+  font-weight: bold; /* Đặt độ đậm cho văn bản liên kết */
+  transition: color 0.3s ease; /* Hiệu ứng màu khi di chuột qua liên kết */
+}
+
+/* CSS Hover Effect for links inside table data */
+.list-cat a:hover {
+  color: #007bff; /* Màu văn bản thay đổi khi di chuột qua liên kết */
+}
+
+.btsearch{
+  border-radius: 5px;
+}
+.ipsearch{
+  border-radius: 5px; 
+}
+
+
+
   

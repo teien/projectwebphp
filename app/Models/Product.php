@@ -8,4 +8,8 @@ class Product extends Model
 {
     use HasFactory;
     protected $table = 'products';
+    public function scopeOrderByPrice($query, $order = 'asc')
+    {
+        return $query->orderBy('price', $order);
+    }
 }
