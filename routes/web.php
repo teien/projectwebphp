@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductDetailController;
 
@@ -38,10 +38,16 @@ Route::post('/comment/{id}' , [ProductDetailController::class, 'post_comment'])-
 
 Route::get('/product/{id}' , [ProductDetailController::class, 'comment']);
 
-
 Route::get('/comment/edit/{id}' , [ProductDetailController::class, 'update']);
 
 Route::get('/comment/delete/{id}' , [ProductDetailController::class, 'destroy']);
+
+
+
+
+
+
+
 
 
 
