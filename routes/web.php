@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ProductDetail;
+use App\Http\Controllers\ProductDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,14 +28,20 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
 
-Route::get('/product/{id}' , [ProductDetail::class, 'show']);
+Route::get('/product/{id}' , [ProductDetailController::class, 'show']);
 
-Route::get('/product' , [ProductDetail::class, 'index']);
+Route::get('/product' , [ProductDetailController::class, 'index']);
 
 Route::post('/contact' , [ContactController::class, 'store']);
 
-Route::post('/comments' , [ProductDetail::class, 'store']);
+Route::post('/comment/{id}' , [ProductDetailController::class, 'post_comment'])->name('product.comment');
 
+Route::get('/product/{id}' , [ProductDetailController::class, 'comment']);
+
+
+Route::get('/comment/edit/{id}' , [ProductDetailController::class, 'update']);
+
+Route::get('/comment/delete/{id}' , [ProductDetailController::class, 'destroy']);
 
 
 

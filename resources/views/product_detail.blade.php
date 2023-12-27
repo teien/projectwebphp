@@ -111,6 +111,10 @@ input[type=checkbox]:checked ~ label > img {
 
 .text {
   margin: 0;
+  font-size:15px;
+}
+.date-cmt{
+    font-size:12px
 }
     </style>
 </head>
@@ -182,24 +186,24 @@ input[type=checkbox]:checked ~ label > img {
                         </div>
                 </div>
                 <h2 class="text-center">Comments</h2>
-                @if (auth()->check())
-                <form action="/comments" method="POST" role="form">
-                    @csrf
-                      <div class="form-group">
-                        <h4>Username</h4>
-                        <input class="username-input" type="text" name="username">
-                        <textarea name="comments" class="form-control" placeholder="Comment here..." id="" cols="30" rows="3"></textarea>
-                        <button type="submit" class="btn btn-dark">Send</button>
-                      </div>
-                </form>
+               @if(auth()->check())
+                    <form action="{{ route('product.comment',  $products->id) }}" method="POST" role="form">
+                        @csrf
+                        <div class="form-group">
+                            
+                            <textarea name="comments" class="form-control" placeholder="Comment here..." id="" cols="30" rows="3"></textarea>
+                            <button type="submit" class="btn btn-dark">Send</button>
+                        </div>
+                    </form>
                @else
                 <div class="alert alert-danger">
-                    <strong>Chưa đăng nhập</strong> <br>Click tại đây để đăng nhập <a href="/login">Đăng nhập</a>
+                    <strong>Chưa đăng nhập</strong> <br>
+                    Click vào đây để đăng nhập <a href="/login">Đăng nhập</a>
                 </div>
-
-                
+             
                @endif
-
+             
+@foreach($comments as $comm)
 <div class="container py-4">
   <div class="row">
    
@@ -209,10 +213,13 @@ input[type=checkbox]:checked ~ label > img {
           <div class="comment-container" id="comment-container">
            
             <div class="comment">
-              <img src="https://via.placeholder.com/50" alt="Avatar" class="avatar">
+              <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg" alt="Avatar" class="avatar">
               <div class="comment-details">
-                <h6 class="username">Bang Nguyen</h6>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h5 class="username">$comm->user->name</h5> 
+                <p class="text">{{$comm->comments}}</p>
+                <p class="date-cmt">{{$comm->created_at->format('d/m/Y')}}</p>
+                <a class="btn btn-primary" href="/comment/edit/{{$comm->id}}">Sửa</a>
+                <a class="btn btn-danger" href="/comment/delete/{{$comm->id}}">Xóa</a>
               </div>
             </div>
             
@@ -222,6 +229,7 @@ input[type=checkbox]:checked ~ label > img {
     
   </div>
 </div>
+@endforeach
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             
@@ -231,18 +239,17 @@ input[type=checkbox]:checked ~ label > img {
 
 
         <div class="container">
-            <h2 class="text-center">Sản phẩm hot nhất</h2>
+            <h2 class="text-center">Sản phẩm liên quan</h2>
             <div class="row">
                 <div class="col-3">
-                    <a href="/product/5">
-
+                    
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                                 
                             </div>
-                        </a>
+                        
 </div>
                 </div>
                 <div class="col-3">

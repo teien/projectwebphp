@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Comments extends Model
 {
     use HasFactory;
-    protected $table = 'comments';
+    protected $fillable = ['user_id' , 'product_id' , 'comments'];
+
+    public function user(){
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }
