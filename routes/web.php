@@ -46,6 +46,9 @@ Route::get('/comment/delete/{id}' , [ProductDetailController::class, 'destroy'])
 
 
 
+// Trong tệp web.php
+Route::get('/product/{id}', [ProductDetail::class, 'productDetail']);
+
 
 
 
