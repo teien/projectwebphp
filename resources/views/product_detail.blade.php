@@ -289,41 +289,104 @@ input[type=checkbox]:checked ~ label > img {
             <div class="row">
                 <div class="col-3">
                     
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="https://xxivstore.com/wp-content/uploads/2022/09/Marie-Jeanne-Vetiver-Santal-300x300.png" alt="" />
+                        <div class="des">
+                            <span>HOT</span>
+                            <h5>Vetiver Santal</h5>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5"></label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3"></label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1"></label>
                             </div>
-                        
-</div>
+                            <h4>5.100.000 ₫</h4>
+                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    
-           </div>
-</div>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="https://xxivstore.com/wp-content/uploads/2022/09/Marie-Jeanne-Vetiver-Santal-300x300.png" alt="" />
+                        <div class="des">
+                            <span>HOT</span>
+                            <h5>Vetiver Santal</h5>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5"></label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3"></label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1"></label>
+                            </div>
+                            <h4>5.100.000 ₫</h4>
+                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    
-           </div>
-</div>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="https://xxivstore.com/wp-content/uploads/2022/09/Marie-Jeanne-Vetiver-Santal-300x300.png" alt="" />
+                        <div class="des">
+                            <span>HOT</span>
+                            <h5>Vetiver Santal</h5>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5"></label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3"></label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1"></label>
+                            </div>
+                            <h4>5.100.000 ₫</h4>
+                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    
-           </div>
-</div>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="https://xxivstore.com/wp-content/uploads/2022/09/Marie-Jeanne-Vetiver-Santal-300x300.png" alt="" />
+                        <div class="des">
+                            <span>HOT</span>
+                            <h5>Vetiver Santal</h5>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" />
+                                <label for="star5"></label>
+                                <input type="radio" id="star4" name="rating" value="4" />
+                                <label for="star4"></label>
+                                <input type="radio" id="star3" name="rating" value="3" />
+                                <label for="star3"></label>
+                                <input type="radio" id="star2" name="rating" value="2" />
+                                <label for="star2"></label>
+                                <input type="radio" id="star1" name="rating" value="1" />
+                                <label for="star1"></label>
+                            </div>
+                            <h4>5.100.000 ₫</h4>
+                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
             
