@@ -154,7 +154,10 @@ input[type=checkbox]:checked ~ label > img {
             margin-bottom: 5px;
             font-weight: bold;
         }
-
+        .delete-cmt {
+            font-size:10px;
+            color:#808080;
+        }
         
     </style>
 </head>
@@ -261,9 +264,14 @@ input[type=checkbox]:checked ~ label > img {
               <div class="comment-details">
                 <h5 class="username">$comm->user->name</h5> 
                 <p class="text">{{$comm->comments}}</p>
+
                 <p class="date-cmt">{{$comm->created_at->format('d/m/Y')}}</p>
-                <a class="btn btn-primary" href="/comment/edit/{{$comm->id}}">Sửa</a>
-                <a class="btn btn-danger" href="/comment/delete/{{$comm->id}}">Xóa</a>
+                @can('my-comment' , $comm)
+                <p class="text-right">
+                <a class="delete-cmt" href="/comment/delete/{{$comm->id}}">Xóa</a>
+            </p>
+            @endcan
+
               </div>
             </div>
             

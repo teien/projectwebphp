@@ -38,8 +38,6 @@ Route::post('/comment/{id}' , [ProductDetailController::class, 'post_comment'])-
 
 Route::get('/product/{id}' , [ProductDetailController::class, 'comment']);
 
-Route::get('/comment/edit/{id}' , [ProductDetailController::class, 'update']);
-
 Route::get('/comment/delete/{id}' , [ProductDetailController::class, 'destroy']);
 
 

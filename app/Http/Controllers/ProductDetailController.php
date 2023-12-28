@@ -38,15 +38,7 @@ class ProductDetailController extends Controller
         return view('product_detail' , compact('products','comments'));
     }
 
-    public function update(Request $request, string $id)
-    {   
-        $comments = Comments::find($id);
-        $comments->comments =  $comments->comments;
-        $comments->save();
-        return redirect()->action([ProductDetailController::class,'index']);
-    }
 
-   
     public function destroy(string $id)
     {
         $comments = Comments::find($id);
