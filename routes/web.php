@@ -29,5 +29,4 @@ Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'product'])->name('products.filter');
 Route::get('/search', [App\Http\Controllers\ProductController::class, 'search'])->name('search');
 Route::get('/products/search', [ProductController::class, 'search2'])->name('products.search');
-// Route::get('/product', [ProductController::class, 'brand']);
-// Route::post('/get-products', [ProductController::class, 'getProducts']);
+

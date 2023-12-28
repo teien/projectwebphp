@@ -136,7 +136,7 @@
                                                                             <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000
                                                                         </label>
                                                                     </p>
-                                                                    <button type="submit">Lọc</button>
+                                                                    <button class="btsearch" type="submit">Lọc</button>
                                                                 </div>
                                                             </div>
 
@@ -160,7 +160,7 @@
                                                 </option>
                                             </select>
                                             <input type="hidden" name="paged" value="1">
-                                            <br><button type="submit">Tìm kiếm</button></br>
+                                            <br><button class="btsearch" type="submit">Tìm kiếm</button></br>
                                         </form>
                                     </div>
 
