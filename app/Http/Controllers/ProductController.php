@@ -65,4 +65,31 @@ class ProductController extends Controller
 
 
 }
+
+// public function brand()
+//     {
+//         $brands = ["Creed", "Tom Ford", "Dior", "By Kilian", "Hermès", "Versace", "Clive Christian", "Dolce Cabbana", "Jean Paul Gaultier"];
+//         return view('product', compact('brands'));
+//     }
+//     public function getProducts(Request $request)
+//     {
+//         $brand = $request->input('brand');
+//         $productsbrand = $this->getProductsByBrand($brand);
+//         return response()->json(['product' => $productsbrand]);
+//     }
+//     private function getProductsByBrand($brand)
+//     {
+//         // Thực hiện logic để lấy danh sách sản phẩm theo hãng sản phẩm
+//         // Đây chỉ là ví dụ, bạn cần thay thế bằng logic thực tế của bạn
+//         $products = [];
+
+//         if ($brand === "Creed") {
+//             $products = ["Aventus", "Green Irish Tweed", "Silver Mountain Water"];
+//         } elseif ($brand === "Tom Ford") {
+//             $products = ["Tobacco Vanille", "Black Orchid", "Oud Wood"];
+//         }
+//         // Thêm logic cho các hãng sản phẩm khác
+
+//         return $products;
+//     }
 }
