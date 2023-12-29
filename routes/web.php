@@ -27,6 +27,6 @@ Route::get('/',[App\Http\Controllers\ProductHomepage::class, 'product']);
 
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'product'])->name('products.filter');
 
-Route::get('/search', [App\Http\Controllers\ProductController::class, 'search'])->name('search');
-Route::get('/product/search', [ProductController::class, 'search2'])->name('products.search');
+Route::get('/search', [App\Http\Controllers\ProductController::class, 'product'])->name('search');
+Route::get('/product/search', [ProductController::class, 'product'])->name('products.search');
 

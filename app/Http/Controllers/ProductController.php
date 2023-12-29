@@ -23,15 +23,12 @@ class ProductController extends Controller
         // Lấy giá trị từ form
         $genderFilter = $request->input('filter_gioi-tinh');
         $priceFilter = $request->input('filter_khoang-gia');
-
         // Bắt đầu với query cơ bản
         $products = DB::table('products')->select('*');
-
         // Áp dụng bộ lọc nếu có
         if ($genderFilter) {
             $products->where('sex', $genderFilter);
         }
-
         if ($priceFilter) {
             // Chia khoảng giá thành mảng min và max
             $priceRange = explode('-', $priceFilter);
@@ -39,43 +36,40 @@ class ProductController extends Controller
             // Áp dụng điều kiện cho khoảng giá
             $products->whereBetween('price', [$priceRange[0], $priceRange[1]]);
         }
-
         // Lấy kết quả
         $products = $products->get();
-
-        return view('/product', compact('products', 'catalog'));
-    }
-
-    public function search(Request $request)
-    {
+        //search
         $search = $request->input('search');
-        $products = Product::query()
+        $products = DB::table('products')
         ->where('name','LIKE',"%{$search}%")
         ->get();
-        return view('product',compact('products'));
+        //sap xep
+        $searchTerm = $request->input('search2');
+        $orderBy = $request->input('orderby', 'price');
+        $orderDirection = $orderBy === 'price-desc' ? 'desc' : 'asc';
+
+        $products = Product::where('name', 'like', '%' . $searchTerm . '%')
+            ->orderByPrice($orderDirection)
+            ->get();
+
+        return view('/product', compact('products', 'catalog', 'searchTerm', 'orderBy'));
     }
 
+
     public function search2(Request $request)
-{
-    $searchTerm = $request->input('search2');
-    $orderBy = $request->input('orderby', 'price');
-    $orderDirection = $orderBy === 'price-desc' ? 'desc' : 'asc';
+    {
+        $searchTerm = $request->input('search2');
+        $orderBy = $request->input('orderby', 'price');
+        $orderDirection = $orderBy === 'price-desc' ? 'desc' : 'asc';
 
-    $products = Product::where('name', 'like', '%' . $searchTerm . '%')
-        ->orderByPrice($orderDirection)
-        ->get();
+        $products = Product::where('name', 'like', '%' . $searchTerm . '%')
+            ->orderByPrice($orderDirection)
+            ->get();
 
-    // Trả về view cùng với giá trị tìm kiếm và các giá trị khác
-    return view('product', compact('products', 'searchTerm', 'orderBy'));
+        // Trả về view cùng với giá trị tìm kiếm và các giá trị khác
+        return view('product', compact('products', 'searchTerm', 'orderBy'));
 
 
-}
+    }
 
-// public function show($id)
-//     {
-//         // Lấy danh sách sản phẩm theo hãng bằng Query Builder
-//         $products = DB::table('products')->where('brand', $brand)->get();
-
-//         return view('product.index', compact('brand', 'products'));
-//     }
 }
