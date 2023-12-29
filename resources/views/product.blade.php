@@ -29,7 +29,7 @@
 
                 <div class="breadcrumb-cat">
                     <div class="uk-container">
-                        <nav class="woocommerce-breadcrumb"><a href="https://xxivstore.com">Trang chủ</a>&nbsp;/&nbsp;Shop</nav>
+                        <nav class="woocommerce-breadcrumb"><a href="/">Trang chủ</a>&nbsp;/&nbsp;Shop</nav>
                     </div>
                 </div>
 
