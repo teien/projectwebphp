@@ -55,34 +55,34 @@
                                                     <button class="btsearch" type="submit">Tìm kiếm</button>
                                                 </form>
                                                 <div class="list-cat">
-                                                    <table id="myTable">
+                                                    <table id="">
                                                         <tbody>
                                                             <tr>
-                                                                <td> <a href="" class="">Creed</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 1]) }}" class="">Creed</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Tom Ford</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 2]) }}" class="">Tom Ford</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Dior</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 3]) }}" class="">Dior</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">By Kilian</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 4]) }}" class="">By Kilian</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Hermès</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 5]) }}" class="">Hermès</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Versace</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 6]) }}" class="">Versace</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Clive Christian</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 7]) }}" class="">Clive Christian</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Dolce Cabbana</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 8]) }}" class="">Dolce Cabbana</a> </td>
                                                             </tr>
                                                             <tr>
-                                                                <td> <a href="" class="">Jean Paul Gaultier</a> </td>
+                                                                <td> <a href="{{ route('products.filter', ['catalog' => 9]) }}" class="">Jean Paul Gaultier</a> </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -167,30 +167,32 @@
 
                                     <div class="d-flex flex-wrap col">
                                         @foreach($products as $row)
-                                        <div class="products">
-                                            <div class="pro ">
-                                                <img class="pic" src="{{ asset($row->img_link) }}" alt="" />
-                                                <div class="des">
-                                                    <span>HOT</span>
-                                                    <h5 class="prname">{{$row->name}}</h5>
-                                                    <div class="rating">
-                                                        <input type="radio" id="star5" name="rating" value="5" />
-                                                        <label for="star5"></label>
-                                                        <input type="radio" id="star4" name="rating" value="4" />
-                                                        <label for="star4"></label>
-                                                        <input type="radio" id="star3" name="rating" value="3" />
-                                                        <label for="star3"></label>
-                                                        <input type="radio" id="star2" name="rating" value="2" />
-                                                        <label for="star2"></label>
-                                                        <input type="radio" id="star1" name="rating" value="1" />
-                                                        <label for="star1"></label>
+                                            @if($catalog === null || $row->catalog_id == $catalog->id)
+                                                <div class="products">
+                                                    <div class="pro ">
+                                                        <img class="pic" src="{{ asset($row->img_link) }}" alt="" />
+                                                        <div class="des">
+                                                            <span>HOT</span>
+                                                            <h5 class="prname">{{$row->name}}</h5>
+                                                            <div class="rating">
+                                                                <input type="radio" id="star5" name="rating" value="5" />
+                                                                <label for="star5"></label>
+                                                                <input type="radio" id="star4" name="rating" value="4" />
+                                                                <label for="star4"></label>
+                                                                <input type="radio" id="star3" name="rating" value="3" />
+                                                                <label for="star3"></label>
+                                                                <input type="radio" id="star2" name="rating" value="2" />
+                                                                <label for="star2"></label>
+                                                                <input type="radio" id="star1" name="rating" value="1" />
+                                                                <label for="star1"></label>
+                                                            </div>
+                                                            <h5>Sex: {{$row->sex}}</h5>
+                                                            <h4 class="mt-2 price">{{ number_format($row->price, 0, ',', '.') }} đ</h4>
+                                                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
+                                                        </div>
                                                     </div>
-                                                    <h5>Sex: {{$row->sex}}</h5>
-                                                    <h4 class="mt-2 price">{{ number_format($row->price, 0, ',', '.') }} đ</h4>
-                                                    <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            @endif
                                         @endforeach
                                     </div>
 
