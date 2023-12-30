@@ -18,190 +18,156 @@
 
 <body>
     @include('includes.header')
-    <div id="tm-main" class="tm-main uk-section uk-section-default" uk-height-viewport="expand: true" style="min-height: 0px;">
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main" role="main">
-                <header class="woocommerce-products-header uk-margin-medium-top">
-                    <h1 class="woocommerce-products-header__title page-title uk-text-center shop">Shop</h1>
+    <div class="container">
+        <div class="d-flex justify-content-center m-5">
+            <h1>Shop</h1>
+        </div>
+        <div class="container">
+            <p class="" style="
+                                color: #565656;
+                                font-size: 15px;
+                                background-color: #fafafa;
+                                padding: 10px;
+                                margin-bottom: 50px;
+                              ">
+                <a style="text-decoration: none; color: #565656" href="/">Trang chủ</a> /
+                <a style="text-decoration: none; color: #565656">Shop</a>
+            </p>
+        </div>
 
-
-                </header>
-
-                <div class="breadcrumb-cat">
-                    <div class="uk-container">
-                        <nav class="woocommerce-breadcrumb"><a href="/">Trang chủ</a>&nbsp;/&nbsp;Shop</nav>
+        <div class="d-flex flex-wrap col-12  ">
+            <div class="col-2">
+                <div class="">
+                    <h3>
+                        Thương hiệu
+                    </h3>
+                    <div>
+                        <br>
+                        <div>
+                            <form action="{{ route('search') }}" method="GET">
+                                <input style="border-top: none;
+                                                border-left: none;
+                                                border-right: none;
+                                                border-bottom: 1px solid #b1b1b1;
+                                                outline: none;
+                                                " class="ipsearch" type="text" class="uk-input" name="search" placeholder="Bạn cần tìm ..." title="Type in a name">
+                                <button class="btsearch" type="submit">Tìm kiếm</button>
+                            </form>
+                            <div class="list-cat">
+                                <table id="">
+                                    <tbody>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 1]) }}" class="">Creed</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 2]) }}" class="">Tom Ford</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 3]) }}" class="">Dior</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 4]) }}" class="">By Kilian</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 5]) }}" class="">Hermès</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 6]) }}" class="">Versace</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 7]) }}" class="">Clive Christian</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 8]) }}" class="">Dolce Cabbana</a> </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <a href="{{ route('products.filter', ['catalog' => 9]) }}" class="">Jean Paul Gaultier</a> </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="product-cat-wrap d-flex row">
-                    <div class="uk-child-width-1-2 uk-grid-match uk-grid-column-small uk-grid" uk-grid="">
-                        <div class="containerr">
-                            <div class="nav-bar">
-
-
-                                <div class="sidebar-product uk-visible@s">
-                                    <div class="uk-panel widget widget_text" id="text-2">
-                                        <h3>
-
-                                            Thương hiệu
-                                        </h3>
-
-                                        <div class="uk-panel textwidget">
-                                            <p>
-                                            </p>
-                                            <div class="filter-by-brand">
-                                                <form action="{{ route('search') }}" method="GET">
-                                                    <input class="ipsearch" type="text" class="uk-input" name="search" placeholder="Tìm kiếm nhanh" title="Type in a name">
-                                                    <button class="btsearch" type="submit">Tìm kiếm</button>
-                                                </form>
-                                                <div class="list-cat">
-                                                    <table id="">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 1]) }}" class="">Creed</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 2]) }}" class="">Tom Ford</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 3]) }}" class="">Dior</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 4]) }}" class="">By Kilian</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 5]) }}" class="">Hermès</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 6]) }}" class="">Versace</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 7]) }}" class="">Clive Christian</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 8]) }}" class="">Dolce Cabbana</a> </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <a href="{{ route('products.filter', ['catalog' => 9]) }}" class="">Jean Paul Gaultier</a> </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
+                    <div class="">
+                        <div class="">
+                            <div class="">
+                                <div class="">
+                                    <form class="" action="{{ route('products.filter') }}" method="get">
+                                        <div class="">
+                                            <h3>GIỚI TÍNH</h3>
+                                            <div class="item-child">
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px; margin-left: 13px;" class="" name="filter_gioi-tinh" type="checkbox" value="Nam">Nam
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px;margin-left: 13px;" class="" name="filter_gioi-tinh" type="checkbox" value="Nữ">Nữ
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px;margin-left: 13px;" class="" name="filter_gioi-tinh" type="checkbox" value="Unisex">Unisex
+                                                    </label>
+                                                </p>
                                             </div>
                                         </div>
 
-
-
-                                        <div class="uk-panel widget widget_custom_html" id="custom_html-2">
-                                            <div class="widget_text item-filter">
-                                                <div class="widget_text sidebar-box">
-                                                    <div class="textwidget custom-html-widget">
-                                                        <form class="form-filter-price" action="{{ route('products.filter') }}" method="GET">
-                                                            <div class="filter-sidebar gender-filter">
-                                                                <h3>GIỚI TÍNH</h3>
-                                                                <div class="item-child">
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nam">Nam
-                                                                        </label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="nu">Nữ
-                                                                        </label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar gender-checkbox-filter" name="filter_gioi-tinh" type="checkbox" value="unisex">Unisex
-                                                                        </label>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="filter-sidebar">
-                                                                <h3>THEO GIÁ</h3>
-                                                                <div class="item-child">
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="1500000-3000000">1.500.000 - 3.000.000
-                                                                        </label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="3000000-5000000">3.000.000 - 5.000.000
-                                                                        </label>
-                                                                    </p>
-                                                                    <p>
-                                                                        <label>
-                                                                            <input class="uk-checkbox checkbox-filter-sidebar price-checkbox-filter" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000
-                                                                        </label>
-                                                                    </p>
-                                                                    <button class="btsearch" type="submit">Lọc</button>
-                                                                </div>
-                                                            </div>
-
-                                                        </form>
-
-                                                    </div>
-                                                </div>
+                                        <div class="filter-sidebar">
+                                            <h3>THEO GIÁ</h3>
+                                            <div class="item-child">
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px;margin-left: 13px;" class="" name="filter_khoang-gia" type="checkbox" value="1500000-3000000">1.500.000 - 3.000.000
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px;margin-left: 13px;" class="" name="filter_khoang-gia" type="checkbox" value="3000000-5000000">3.000.000 - 5.000.000
+                                                    </label>
+                                                </p>
+                                                <p>
+                                                    <label>
+                                                        <input style="margin-right: 10px;margin-left: 13px;" class="" name="filter_khoang-gia" type="checkbox" value="5000000-100000000">&gt;5.000.000
+                                                    </label>
+                                                </p>
                                             </div>
                                         </div>
-
-                                    </div>
-
-                                    <div class="content-product-cat">
-                                        <form class="woocommerce-ordering" method="get" action="{{ route('products.search') }}">
-                                            <select name="orderby" class="orderby uk-select" aria-label="Đơn hàng của cửa hàng">
-                                                <option value="price" {{ isset($orderBy) && $orderBy === 'price' ? 'selected' : '' }}>
-                                                    Thứ tự theo giá: thấp đến cao
-                                                </option>
-                                                <option value="price-desc" {{ isset($orderBy) && $orderBy === 'price-desc' ? 'selected' : '' }}>
-                                                    Thứ tự theo giá: cao xuống thấp
-                                                </option>
-                                            </select>
-                                            <input type="hidden" name="paged" value="1">
-                                            <br><button class="btsearch" type="submit">Tìm kiếm</button></br>
-                                        </form>
-                                    </div>
-
-
-                                    <div class="d-flex flex-wrap col">
-                                        @foreach($products as $row)
-                                            @if($catalog === null || $row->catalog_id == $catalog->id)
-                                                <div class="products">
-                                                    <div class="pro ">
-                                                        <img class="pic" src="{{ asset($row->img_link) }}" alt="" />
-                                                        <div class="des">
-                                                            <span>HOT</span>
-                                                            <h5 class="prname">{{$row->name}}</h5>
-                                                            <div class="rating">
-                                                                <input type="radio" id="star5" name="rating" value="5" />
-                                                                <label for="star5"></label>
-                                                                <input type="radio" id="star4" name="rating" value="4" />
-                                                                <label for="star4"></label>
-                                                                <input type="radio" id="star3" name="rating" value="3" />
-                                                                <label for="star3"></label>
-                                                                <input type="radio" id="star2" name="rating" value="2" />
-                                                                <label for="star2"></label>
-                                                                <input type="radio" id="star1" name="rating" value="1" />
-                                                                <label for="star1"></label>
-                                                            </div>
-                                                            <h5>Sex: {{$row->sex}}</h5>
-                                                            <h4 class="mt-2 price">{{ number_format($row->price, 0, ',', '.') }} đ</h4>
-                                                            <a href=""><i class="fa-solid fa-cart-shopping cart"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-
+                                        <button class="btsearch" type="submit">Lọc</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </main>
+                </div>
+                
+            </div>
+
+            <div class="d-flex flex-wrap col-10 align-content-start">
+                    @foreach($products as $row)
+                    @if (($catalog === null || $row->catalog_id == $catalog->id) && ($genderFilter === null || $row->sex == $genderFilter)&& ($priceRange === null || ($row->price >= $priceRange[0] && $row->price <= $priceRange[1])))
+                    <div class="products">
+                        <div class="pro ">
+                            <img class="pic" src="{{ asset($row->img_link) }}" alt="" />
+                            <div class="des">
+                                <h5 class="prname">{{$row->name}}</h5>
+                                <h6 class="sex">Sex: {{$row->sex}}</h6>
+                                <h4 class="mt-2 price">{{ number_format($row->price, 0, ',', '.') }} đ</h4>
+                                <div class="rating">
+                                    @for ($i = 5; $i >= 1; $i--)
+                                    <input type="radio" id="star-{{ $loop->index }}-{{ $i }}" name="rating-{{ $loop->index }}" value="{{ $i }}">
+                                    <label for="star-{{ $loop->index }}-{{ $i }}"></label>
+                                    @endfor
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
         </div>
+
     </div>
 </body>
 
